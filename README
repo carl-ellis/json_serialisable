@@ -1,0 +1,6 @@
+A tiny mixin which automatically adds methods for serialising via JSON
+usage:
+ 				attr_serialise :a, :b, ...
+
+remark: These should have a matching constructor in which to create the object
+
