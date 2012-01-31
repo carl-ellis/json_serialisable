@@ -12,7 +12,7 @@ class Class
 
 		#Build to the to_json method
 		tojson = "def to_json(*a)\n{ 'json_class' => #{self.name}"
-		attrs.each { |a| tojson << ",\n'#{a}' => @#{a}.to_s"}
+		attrs.each { |a| tojson << ",\n'#{a}' => @#{a}"}
 		tojson << "\n}.to_json(*a)\nend"
 
 		#build to json_create method
