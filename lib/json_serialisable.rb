@@ -1,9 +1,16 @@
-# A mixin which automatically adds methods for serialising via JSON
-# usage:
-#					attr_serialise :a, :b, ...
-#
-#	remark: These should have a matching constructor in which to create the object
+# Mixin for the Class class
 class Class
+	# A shorthand which automatically adds methods for serialising via JSON
+	#
+	# Example:
+	#					attr_serialise :a, :b, ...
+	#
+	# Arguments:
+	#					(:variable_label)+
+	#
+	#	Remark: 
+	#					There should be a matching contstructor with the same method signature as the labels used in the function call.
+	# 				This way json_create will not error when it is called.
 
 	def attr_serialise(*attrs)
     	

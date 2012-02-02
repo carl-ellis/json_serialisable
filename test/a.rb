@@ -1,4 +1,4 @@
-require '../jserialisable'
+require './lib/json_serialisable'
 require 'json'
 
 class A
