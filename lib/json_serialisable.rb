@@ -23,8 +23,8 @@ class Class
 		tojson << "\n}.to_json(*a)\nend"
 
 		#build to json_create method
-		jsoncreate = "def self.json_create(o)\nnew( *o['#{attrs.shift}']"
-		attrs.each { |a| jsoncreate << ", *o['#{a}']" }
+		jsoncreate = "def self.json_create(o)\nnew( o['#{attrs.shift}']"
+		attrs.each { |a| jsoncreate << ", o['#{a}']" }
 		jsoncreate << ")\nend"
 
 		# Add methods
